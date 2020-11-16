@@ -17,7 +17,7 @@ public class ScreenShooter
     public static void takeScreenshot(WebDriver webDriver) throws IOException {
         TakesScreenshot screenshot = (TakesScreenshot) webDriver;
         File ssFile = screenshot.getScreenshotAs(OutputType.FILE);
-        File path = new File("src/main/resources/screenshots/" + date.format(new Date()));
+        File path = new File("src/test/resources/screenshots/" + date.format(new Date()));
         FileUtils.copyFile(ssFile, path);
     }
 }
